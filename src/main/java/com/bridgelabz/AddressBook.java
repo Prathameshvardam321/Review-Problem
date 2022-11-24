@@ -19,7 +19,6 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class AddressBook {
-
     Scanner sc = new Scanner(System.in);
     Contact contact = new Contact();
     ArrayList<Contact> contacts = new ArrayList<>();

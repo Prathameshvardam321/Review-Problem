@@ -100,9 +100,16 @@ public class AddressBookMain  {
                     addressBook = addressBookHashMap.get(addBookName1);
                     addressBook.readFiles(addressBookHashMap, file);
                     break;
+                case 10:
+                    String csvPath = "C:\\Users\\prath\\OneDrive\\Desktop\\java programs\\AddressBookFinal\\src\\main\\java\\com\\bridgelabz\\addressbook.csv";
+                    System.out.println("Enter AddressBook name to read  : ");
+                    addBookName1 = scanner.next();
+                    addressBook = addressBookHashMap.get(addBookName1);
+                    addressBook.writeCsv(addressBookHashMap,csvPath);
+                    addressBook.readCsv(csvPath);
+                    break;
 
             }
         } while (ch != 0);
-
     }
 }
