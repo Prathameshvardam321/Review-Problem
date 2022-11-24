@@ -108,6 +108,16 @@ public class AddressBookMain  {
                     addressBook.writeCsv(addressBookHashMap,csvPath);
                     addressBook.readCsv(csvPath);
                     break;
+                case 11:
+                    JSONArray jsonPersons = new JSONArray();
+                    Path jsonPath = Paths.get("C:\\Users\\prath\\OneDrive\\Desktop\\java programs\\AddressBookFinal\\src\\main\\java\\com\\bridgelabz\\addresBook.json");
+                    System.out.println("Enter AddressBook name to read  : ");
+                    addBookName1 = scanner.next();
+                    addressBook = addressBookHashMap.get(addBookName1);
+                    addressBook.writeJson(addressBookHashMap,jsonPersons,jsonPath);
+                    JSONParser jsonParser = new JSONParser();
+                    addressBook.readJson(jsonParser,jsonPath);
+                    break;
 
             }
         } while (ch != 0);
